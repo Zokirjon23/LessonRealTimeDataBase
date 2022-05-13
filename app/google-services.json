@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "609272326124",
+    "project_id": "lesson-2ebe9",
+    "storage_bucket": "lesson-2ebe9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609272326124:android:f21ae809bedd68742dc2c9",
+        "android_client_info": {
+          "package_name": "uz.example.lessonrealtimedatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609272326124-9cepn30mk8k21f0hosmcnuunl23krruf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uz.example.lessonrealtimedatabase",
+            "certificate_hash": "92877242b56afc935989def850bf611b1dd74081"
+          }
+        },
+        {
+          "client_id": "609272326124-nvqpkhh2rrm7l7runln0jhbpj64q0gmk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJd7-7XTkRrT4QiC-msp_C48EJfdfSkgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609272326124-nvqpkhh2rrm7l7runln0jhbpj64q0gmk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

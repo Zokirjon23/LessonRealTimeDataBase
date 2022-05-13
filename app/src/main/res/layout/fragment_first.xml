@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".FirstFragment">
+
+    <EditText
+        android:textColor="@color/black"
+        android:background="@drawable/corner_view"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:hint="Create name"
+        android:layout_margin="15dp"
+        android:elevation="10dp"
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next" />
+
+</LinearLayout>
