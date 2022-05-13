@@ -14,11 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.getValue
 import uz.example.lessonrealtimedatabase.databinding.FragmentSecondBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class SecondFragment : Fragment() {
-
     private val cache = Cache.cache
     private var _binding: FragmentSecondBinding? = null
 
@@ -31,8 +27,8 @@ class SecondFragment : Fragment() {
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
-
     }
+
 
     private val db = FirebaseDatabase.getInstance().reference
     private val adapter = ChatAdapter(cache!!.getId())
@@ -41,7 +37,7 @@ class SecondFragment : Fragment() {
 
         binding.chatList.adapter = adapter
         binding.send.setOnClickListener {
-            val text = binding.editText.text.toString()
+            val text = binding.editText.text.trim().toString()
             val id = SystemClock.elapsedRealtime()
             val massage = Massage(id, cache!!.getId(), text)
             db.child("messages").child(id.toString()).setValue(massage)
@@ -58,6 +54,7 @@ class SecondFragment : Fragment() {
                 val data = snapshot.getValue<Massage>()!!
                 Log.d("VVVV", "onChildAdded: ${data.massage}")
                 adapter.insertMassage(snapshot.getValue<Massage>()!!)
+                binding.chatList.smoothScrollToPosition(adapter.getScrollPosition())
             }
 
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
